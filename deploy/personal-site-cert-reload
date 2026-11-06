@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+site_chain=/etc/personal-site/tls/fullchain.pem
+site_key=/etc/personal-site/tls/private.key
+site_state=/var/lib/personal-site/tls-active.sha256
+site_digest="$(sha256sum "$site_chain" | cut -d ' ' -f 1)"
+if [[ -f "$site_state" && "$(cat "$site_state")" == "$site_digest" ]]; then
+  exit 0
+fi
+
+openssl x509 -in "$site_chain" -checkend 86400 -noout
+openssl x509 -in "$site_chain" -checkhost xujinghui.com.cn -noout
+openssl x509 -in "$site_chain" -checkhost www.xujinghui.com.cn -noout
+site_cert_public="$(openssl x509 -in "$site_chain" -pubkey -noout | openssl pkey -pubin -outform DER | sha256sum)"
+site_key_public="$(openssl pkey -in "$site_key" -pubout -outform DER | sha256sum)"
+[[ "$site_cert_public" == "$site_key_public" ]]
+/usr/local/x-ui/bin/xray-linux-amd64 -test -config /usr/local/x-ui/bin/config.json
+systemctl restart x-ui.service
+curl --fail --silent --show-error --retry 4 --retry-connrefused --retry-delay 1 --max-time 10 \
+  --resolve xujinghui.com.cn:443:127.0.0.1 https://xujinghui.com.cn/ -o /dev/null
+printf '%s\n' "$site_digest" > "$site_state"

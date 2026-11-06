@@ -1,0 +1,11 @@
+[Unit]
+Description=Renew the personal website HTTPS certificate
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+UMask=0077
+WorkingDirectory=/etc/personal-site/acme
+ExecStart=/root/.acme.sh/acme.sh --cron --home /root/.acme.sh --config-home /etc/personal-site/acme --cert-home /etc/personal-site/acme/certs

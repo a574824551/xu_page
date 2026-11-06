@@ -1,0 +1,11 @@
+[Unit]
+Description=Check personal website certificate renewal twice daily
+
+[Timer]
+OnCalendar=*-*-* 04,16:17:00 Asia/Shanghai
+RandomizedDelaySec=1800
+Persistent=true
+Unit=personal-site-cert-renew.service
+
+[Install]
+WantedBy=timers.target

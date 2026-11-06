@@ -1,0 +1,29 @@
+# Local dependencies and caches
+node_modules/
+.cache/
+.DS_Store
+Thumbs.db
+
+# Environment files, keys, certificates and service databases
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.db
+*.sqlite
+*.sqlite3
+.ssh/
+.acme.sh/
+
+# Runtime output and local backup archives
+*.log
+*.pid
+*.tar.gz
+*.bundle
+backups/
+
+# Keep dist tracked: it contains the published site and photo assets.

@@ -1,0 +1,112 @@
+{
+  "yongle-cctv": {
+    "width": 1440,
+    "height": 796,
+    "bytes": 48030
+  },
+  "smp2025": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 72986
+  },
+  "happyhorse-invite": {
+    "width": 1013,
+    "height": 1800,
+    "bytes": 77270
+  },
+  "yunqi-talk": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 62838
+  },
+  "yunqi-stage": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 111706
+  },
+  "yunqi-panel": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 103706
+  },
+  "yunqi-room": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 111742
+  },
+  "portrait": {
+    "width": 1200,
+    "height": 1800,
+    "bytes": 67252
+  },
+  "jinqiu-room": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 142748
+  },
+  "jinqiu-talk": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 97534
+  },
+  "jinqiu-discussion": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 72206
+  },
+  "copyright-talk": {
+    "width": 1440,
+    "height": 959,
+    "bytes": 52952
+  },
+  "copyright-roundtable": {
+    "width": 1199,
+    "height": 1800,
+    "bytes": 196580
+  },
+  "ceis-talk": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 76220
+  },
+  "ceis-poster": {
+    "width": 1013,
+    "height": 1800,
+    "bytes": 136078
+  },
+  "youtube-talk": {
+    "width": 1440,
+    "height": 959,
+    "bytes": 67026
+  },
+  "youtube-stage": {
+    "width": 1440,
+    "height": 959,
+    "bytes": 92912
+  },
+  "cctv-finance": {
+    "width": 616,
+    "height": 316,
+    "bytes": 33912
+  },
+  "cctv-open-talk": {
+    "width": 1440,
+    "height": 1080,
+    "bytes": 153980
+  },
+  "book-credits": {
+    "width": 1080,
+    "height": 1440,
+    "bytes": 189422
+  },
+  "book-cover": {
+    "width": 750,
+    "height": 750,
+    "bytes": 51544
+  },
+  "cupl-workshop": {
+    "width": 1440,
+    "height": 960,
+    "bytes": 159232
+  }
+}
